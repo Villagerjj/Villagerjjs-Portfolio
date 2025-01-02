@@ -1,0 +1,98 @@
+html, body {
+    height: 100%; /* Ensure the page takes up the full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main main main'
+    'menu footer footer footer footer footer';
+    gap: 5px;
+    padding: 5px;
+    height: 100vh; /* Ensure the container takes full height of the viewport */
+}
+
+.sidebar {
+    background-color: #474954;
+    color: #a9b3ce;
+    padding: 20px;
+    position: fixed; /* Fix the sidebar to the left of the screen */
+    top: 20px; /* Start 20px from the top */
+    left: 0;
+    width: 200px; /* Fixed width for the sidebar */
+    height: calc(100vh - 40px); /* Full height minus padding */
+    overflow-y: auto;
+    transition: top 0.3s ease; /* Smooth transition when sliding the sidebar */
+}
+
+.main {
+    margin-left: 220px; /* Offset the main content so it's not hidden under the sidebar */
+    color: #a9b3ce;
+    background-color: #474954;
+    padding: 20px;
+    font-size: 20px;
+    height: 100%; /* Allow the main content to take full height */
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #474954;
+    color: #a9b3ce;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sidebar Navigation Styles */
+.sidebar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar h1 {
+    text-transform: uppercase;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: #a9b3ce; /* Set all nav links to white */
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+}
+
+.nav-link:hover {
+    color: #7cdedc; /* Highlight on hover with blue */
+    text-decoration: underline;
+}
+
+.nav-link.active {
+    color: #9e788f; /* Change active link color */
+    font-weight: bold; /* Optional: make active link bold */
+}
+
+.main h1 {
+    color: #a9b3ce;
+}
+
+.main img {
+    border-radius: 10px;
+}
+
+#top {
+color: #7cdedc;
+font-family: 'Tomorrow', sans-serif;
+text-align: center;
+font-size: 40px;
+}
+
+#top h1 {
+color: #7cdedc;
+margin: 1px;
+}

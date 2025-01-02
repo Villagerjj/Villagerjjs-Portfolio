@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Heney's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <!-- Flex container for the sidebar and content -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#top" id="top-link" class="nav-link active"><span>Intro</span></a></li>
+                <li><a href="#computers" id="computers-link" class="nav-link"><span>Computers Projects</span></a></li>
+                <li><a href="#art" id="art-link" class="nav-link"><span>Art Projects</span></a></li>
+                <li><a href="#hybrid" id="hybrid-link" class="nav-link"><span>Hybrid Projects</span></a></li>
+                <li><a href="#contact" id="contact-link" class="nav-link"><span>Contact</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Main content area -->
+        <div class="content">
+            <section id="top">
+                <h2>Intro</h2>
+                <p>Welcome to the introductory section of the website.</p>
+            </section>
+            <section id="computers">
+                <h2>Computers Projects</h2>
+                <p>Details about computer-related projects.</p>
+            </section>
+            <section id="art">
+                <h2>Art Projects</h2>
+                <p>Placeholder content...</p>
+                <img src="assets/images/main/clouds.png" alt="Clouds">
+            </section>
+            <section id="hybrid">
+                <h2>Hybrid Projects</h2>
+                <p>Details about hybrid projects.</p>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>How to contact us.</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and active class toggling
+        const links = document.querySelectorAll('.nav-link');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all links
+                links.forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

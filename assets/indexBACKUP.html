@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Villagerjj's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+		<!-- Sidebar Section -->
+		<div class="sidebar" id="sidebar">
+			<h1>Villagerjj's <br> Portfolio</h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="#top" id="top-link" class="nav-link active"><span>Intro</span></a></li>
+					<li><a href="#computers" id="computers-link" class="nav-link"><span>Computers Projects</span></a></li>
+					<li><a href="#art" id="art-link" class="nav-link"><span>Art Projects</span></a></li>
+					<li><a href="#hybrid" id="hybrid-link" class="nav-link"><span>Hybrid Projects</span></a></li>
+					<li><a href="#contact" id="contact-link" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="grid-container">
+			<!-- Main Content Section -->
+			<div class="main">
+				<div id="top">
+					<h1> PROGRAMMER </h1>
+					<p> Creative Solutions </p>
+					<h1> ARTIST </h1>
+				</div>
+
+				<div id="computers">
+					<h2>Computers Projects</h2>
+					<p>Placeholder content...</p>
+				</div>
+
+				<div id="art">
+					<h2>Art Projects</h2>
+					<p>Placeholder content...</p>
+					<img src="assets/images/main/clouds.png" alt="Clouds">
+				</div>
+			</div>
+
+			<!-- Footer Section -->
+			<div class="footer">Footer</div>
+		</div>
+	</body>
+
+	<script>
+		// When the user scrolls down 20px from the top of the document, slide down the sidebar
+		// When the user scrolls to the top of the page, slide up the sidebar (50px out of the top view)
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("sidebar").style.top = "0";
+			} else {
+				document.getElementById("sidebar").style.top = "-50px";
+			}
+		}
+
+		// Add active class to links based on scrolling
+		window.addEventListener('scroll', function() {
+			const sections = document.querySelectorAll('div[id]');
+			const links = document.querySelectorAll('.nav-link');
+
+			let currentSection = '';
+
+			sections.forEach(section => {
+				const sectionTop = section.offsetTop;
+				const sectionHeight = section.clientHeight;
+
+				if (pageYOffset >= sectionTop - sectionHeight / 3) {
+					currentSection = section.getAttribute('id');
+				}
+			});
+
+			links.forEach(link => {
+				link.classList.remove('active');
+				if (link.getAttribute('href') === `#${currentSection}`) {
+					link.classList.add('active');
+				}
+			});
+		});
+	</script>
+</html>
