@@ -6,9 +6,12 @@
     <title>John Heney's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="main.css" />
 </head>
 <body>
+    <!-- 3D Viewer -->
+    <script type="module" src="/art/3D-Art/scripts/model-viewer.min.js"></script>
+
     <!-- Flex container for the sidebar and content -->
     <div class="main-container">
         <!-- Sidebar -->
@@ -17,7 +20,6 @@
                 <li><a href="#top" id="top-link" class="nav-link active"><span>Intro</span></a></li>
                 <li><a href="#computers" id="computers-link" class="nav-link"><span>Computers Projects</span></a></li>
                 <li><a href="#art" id="art-link" class="nav-link"><span>Art Projects</span></a></li>
-                <li><a href="#hybrid" id="hybrid-link" class="nav-link"><span>Hybrid Projects</span></a></li>
                 <li><a href="#contact" id="contact-link" class="nav-link"><span>Contact</span></a></li>
             </ul>
         </div>
@@ -35,11 +37,18 @@
             <section id="art">
                 <h2>Art Projects</h2>
                 <p>Placeholder content...</p>
-                <img src="assets/images/main/clouds.png" alt="Clouds">
-            </section>
-            <section id="hybrid">
-                <h2>Hybrid Projects</h2>
-                <p>Details about hybrid projects.</p>
+
+                <model-viewer src="art/3D-Art/models/LowPolyTifa2025.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="/art/3D-Art/animations/TifaStylizedRender3-Blonde.gif" shadow-intensity="1" auto-rotate style="width: 50%; height: 600px;">
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                </model-viewer>
+                <noscript>
+                    <div id="fallback" style="display: none; text-align: center;">
+                        <img src="/art/3D-Art/animations/TifaStylizedRender3-Blonde.gif" alt="3D Model Preview" style="width: 50%; max-width: 600px; height: auto;">
+                    </div>
+                </noscript>
+                <img src="/art/images/paintings/TitansongSky3.png" alt="Clouds">
             </section>
             <section id="contact">
                 <h2>Contact</h2>
