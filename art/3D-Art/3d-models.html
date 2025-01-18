@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Heney's Portfolio - 3D Models</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../main.css" />
+</head>
+<body>
+    <!-- 3D Viewer -->
+    <script type="module" src="scripts/model-viewer.min.js"></script>
+
+    <!-- Flex container for the sidebar and content -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#top" id="top-link" class="nav-link active"><span>Intro</span></a></li>
+                <li><a href="#bestworks" id="bestworks-link" class="nav-link"><span>Personal Projects</span></a></li>
+                <li><a href="#coms" id="coms-link" class="nav-link"><span>Client Projects</span></a></li>
+                <li><a href="#contact" id="contact-link" class="nav-link"><span>Contact</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Main content area -->
+        <div class="content">
+            <section id="top">
+                <h2>Intro</h2>
+                <p>Welcome to the introductory section of the website.</p>
+            </section>
+            <section id="bestworks">
+                <h2>Personal Projects:</h2>
+                <p>Details about computer-related projects.</p>
+                <div class="model-viewer-container">
+                    <model-viewer src="models/Male_Villager_Adult_01.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="animations/DoomguySpinUntexturedTransparent.gif" shadow-intensity="1" autoplay animation-name="Walking" auto-rotate style="width: 50%; height: 600px;">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                    </model-viewer>
+                    <p>This character is an NPC I made for an asset pack, this model showcases the gradient texture mapping technique, along with animation ready geometry. The model uses a 43x43 texture, however, it is not fully utilized. the eyes and mouth both use a single 32x32 texture.</p>
+                    <model-viewer src="models/DoomguyShowcase.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="animations/DoomguySpinUntexturedTransparent.gif" shadow-intensity="1" autoplay animation-name="Walking" auto-rotate style="width: 50%; height: 600px;">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                    </model-viewer>
+                    <p>This character is a low poly version of Doomguy from the Doom (1993). this model was made for fun, and sadly does not employ any techniques. the model is not animation-ready. </p>
+                    <model-viewer src="models/SamusShowcase2025.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/SamusPoster.webp" shadow-intensity="1" autoplay animation-name="Walking" auto-rotate style="width: 50%; height: 600px;">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                    </model-viewer>
+                    <p>This character is a stylized verison of Samus Aran from the Metroid series. the model showcases gradient texture mapping, and animation-ready geometry, all in a low poly style. the model is 674 triangles, and uses a single 8x32 texture. this model is highly optimized for low memory environments, and could look good on underpowered technology such as the N64, PS1, and DS</p>
+                </div>
+            </section>
+            <section id="coms">
+                <h2>Commissioned Projects:</h2>
+                <p>Placeholder content...</p>
+                 <div class="model-viewer-container">
+                    <model-viewer src="models/MarionettePortfolio.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="models/MarionettePoster.webp" shadow-intensity="1" auto-rotate style="width: 50%; height: 600px;">
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                    </model-viewer>
+                </div>
+
+
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>How to contact us.</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and active class toggling
+        const links = document.querySelectorAll('.nav-link');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all links
+                links.forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
