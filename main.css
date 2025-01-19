@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'Tomorrow';
+    src: url('assets/fonts/tomorrow.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; /* Allows fallback font to render immediately */
+}
+
 /* Basic styling */
 body {
-    font-family: Tomorrow;
+    font-family: Arial, sans-serif; /* Fallback font */
+    font-family: 'Tomorrow', Arial, sans-serif; /* Web font with fallback */
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,6 +17,8 @@ body {
     background-color: #474954;
     color: white;
 }
+
+
 
 .button-container {
     display: flex;
@@ -74,7 +85,7 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
-    font-size: 18px;
+    font-size: 25px;
     transition: background-color 0.3s ease;
 }
 
@@ -90,6 +101,7 @@ body {
     box-sizing: border-box;
     margin-left: 15%;
     padding: 10px;
+    font-size: 20px;
 }
 
 .content a {
@@ -103,6 +115,68 @@ body {
 
 }
 
+.content #top-fast {
+    /* Set the background image */
+    background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #474954 100%),
+    url('art/3D-Art/images/renders/TifaBackgroundImage.webp');
+
+    /* Adjust the position and behavior of the background */
+    background-size: cover; /* Ensures it covers the full width */
+    background-repeat: no-repeat; /* Avoids repeating the image */
+    background-attachment: scroll; /* Background scrolls with the content */
+    background-position: center top; /* Aligns the image at the top center */
+
+    /* Set a minimum height for the section */
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Optional: Add padding for content inside */
+    padding: 20px;
+    color: white; /* Ensures text inside is readable */
+}
+
+/* Text container (left side) */
+.content .text-container {
+    font-size: 25px;
+    flex: 1; /* Allow the text container to take up available space */
+    padding-right: 20px; /* Add spacing between text and image */
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.content .text-container h1 {
+    font-size: 60px;
+    text-shadow: 4px 4px 4px #000000;
+}
+
+/* Image container (right side) */
+.content .image-container {
+    display: flex; /* Ensure proper alignment for the image */
+    align-items: center; /* Vertically center the image within its container */
+    justify-content: center; /* Horizontally center the image */
+    flex: 1; /* Allow the image container to take up available space */
+}
+
+/* Image styling */
+.content .image-container img {
+    width: 60%; /* Set the width of the image */
+    margin-top: 5%;
+    max-width: 800px; /* Optional: Add a max-width for better responsiveness */
+    border-radius: 10px;
+    display: block;
+    opacity: 1;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+                                         color-stop(50%, rgba(0, 0, 0, 1)),
+                                         color-stop(80%, rgba(0, 0, 0, 0.2)),
+                                         color-stop(100%, rgba(0, 0, 0, 0)));
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     .sidebar {
@@ -113,6 +187,40 @@ body {
     .content {
         padding: 10px; /* Adjust content padding for mobile */
         margin-left: 30%; /* Offset content dynamically based on new sidebar width */
+    }
+
+    /* Image styling */
+    .content .image-container img {
+        width: 100%; /* Make sure the image takes up full container width */
+
+        border-radius: 10px;
+        display: block; /* Removes bottom margin (gap) from image */
+        opacity: 1; /* Adjust this to control transparency */
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+                                             color-stop(50%, rgba(0, 0, 0, 1)),
+                                             color-stop(80%, rgba(0, 0, 0, 0.2)),
+                                             color-stop(100%, rgba(0, 0, 0, 0)));
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+
+    }
+
+    .content #top-fast {
+        /* Set the background image */
+        background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #474954 100%),
+        url('art/3D-Art/images/renders/TifaBackgroundImage.webp');
+
+        /* Adjust the position and behavior of the background */
+        background-size: cover; /* Ensures it covers the full width */
+        background-repeat: no-repeat; /* Avoids repeating the image */
+        background-attachment: scroll; /* Background scrolls with the content */
+        background-position: center top; /* Aligns the image at the top center */
+
+        /* Set a minimum height for the section */
+        min-height: 50%;
+
+        color: white; /* Ensures text inside is readable */
     }
 }
 
@@ -125,6 +233,30 @@ body {
     .content {
         padding: 10px; /* Adjust content padding for mobile */
         margin-left: 30%; /* Offset content dynamically based on new sidebar width */
+    }
+
+    .content .image-container img {
+        display: none;
+    }
+
+    .content #top-fast {
+        /* Set the background image */
+        background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #474954 100%),
+        url('art/3D-Art/images/renders/TifaBackgroundImage.webp');
+
+        /* Adjust the position and behavior of the background */
+        background-size: cover; /* Ensures it covers the full width */
+        background-repeat: no-repeat; /* Avoids repeating the image */
+        background-attachment: scroll; /* Background scrolls with the content */
+        background-position: center top; /* Aligns the image at the top center */
+
+        /* Set a minimum height for the section */
+        min-height: 50%;
+
+        /* Optional: Add padding for content inside */
+        padding: 20px;
+        color: white; /* Ensures text inside is readable */
     }
 }
 
@@ -139,7 +271,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    min-height: 100vh;
+
     background-color: #474954;
     color: white;
 }
