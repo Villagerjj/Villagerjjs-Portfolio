@@ -119,7 +119,7 @@ body {
     /* Set the background image */
     background:
     linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #474954 100%),
-    url('art/3D-Art/images/renders/TifaBackgroundImage.webp');
+    url('art/3D-Art/images/renders/TifaBackgroundImage.avif');
 
     /* Adjust the position and behavior of the background */
     background-size: cover; /* Ensures it covers the full width */
@@ -209,7 +209,7 @@ body {
         /* Set the background image */
         background:
         linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #474954 100%),
-        url('art/3D-Art/images/renders/TifaBackgroundImage.webp');
+        url('art/3D-Art/images/renders/TifaBackgroundImage.avif');
 
         /* Adjust the position and behavior of the background */
         background-size: cover; /* Ensures it covers the full width */
@@ -243,7 +243,7 @@ body {
         /* Set the background image */
         background:
         linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #474954 100%),
-        url('art/3D-Art/images/renders/TifaBackgroundImage.webp');
+        url('art/3D-Art/images/renders/TifaBackgroundImage.avif');
 
         /* Adjust the position and behavior of the background */
         background-size: cover; /* Ensures it covers the full width */
