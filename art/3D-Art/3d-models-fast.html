@@ -3,54 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villagerjj's Portfolio - 3D Models (Fast Loading)</title>
+    <title>Villagerjj's Portfolio - 3D Models (NO 3D)</title>
     <link rel="stylesheet" href="../../main-mini.css" />
 </head>
 <body>
-    <!-- Flex container for the sidebar and content -->
     <div class="main-container">
         <!-- Sidebar -->
         <div class="sidebar">
             <ul>
                 <li><a href="#top" id="top-link" class="nav-link active"><span>Intro</span></a></li>
-                <li><a href="#bestworks" id="bestworks-link" class="nav-link"><span>Personal Projects</span></a></li>
+                <li><a href="#chars" id="chars-link" class="nav-link"><span>Characters</span></a></li>
+                <li><a href="#envs" id="envs-link" class="nav-link"><span>Environments</span></a></li>
                 <li><a href="#coms" id="coms-link" class="nav-link"><span>Client Projects</span></a></li>
                 <li><a href="#contact" id="contact-link" class="nav-link"><span>Contact</span></a></li>
             </ul>
         </div>
-
         <!-- Main content area -->
         <div class="content">
             <section id="top-fast">
                 <div class="image-container">
                     <div class="text-container">
-                        <h1>Low Poly Models</h1>
-                        <p>Hello! This is my portfolio for my various low poly 3D models!</p>
+                        <h1>Low-Poly Models</h1>
+                        <p>Explore a collection of 3D models designed for performance without compromising on artistic quality.</p>
                     </div>
-                    <img src="images/renders/TifaPosed.avif">
+                    <img src="images/renders/TifaBackgroundImage.avif" fetchpriority="high" style="display: none;" alt="Preload">
+                    <img src="images/renders/TifaPosed.avif" fetchpriority="high">
                 </div>
             </section>
-            <section id="bestworks">
-                <h2>Personal Projects:</h2>
-                <p>These are all projects I did to apply the various skills I have learned, or models I just made for fun.</p>
-                <!--<img src="animations/DoomGuySpin.webp">-->
+            <section id="chars">
+                <h2>Characters:</h2>
+                <p> A showcase of stylized characters designed as personal projects, blending creativity with technical precision. These models demonstrate my ability to craft diverse and visually engaging designs.</p>
                 <div class="model-viewer-container">
-                    <img src="animations/MaleVillager01SpinShowcase.avif" style="width: 20vw; min-width: 330px;">
+                    <img src="animations/MaleVillager01SpinShowcase.avif" style="width: 20vw; min-width: 330px; margin:0 auto;" fetchpriority="medium">
                     <p>This character is an NPC I made for an asset pack, this model showcases the gradient texture mapping technique, along with animation ready geometry. The model uses a 43x43 texture, however, it is not fully utilized. the eyes and mouth both use a single 32x32 texture.</p>
-                    <img src="animations/DoomguySpin.avif" style="width: 20vw; min-width: 330px;">
-                    <p>This character is a low poly version of Doomguy from the Doom (1993). this model was made for fun, and sadly does not employ any techniques. the model is not animation-ready. </p>
-                    <img src="animations/SamusSpinShowcase.avif" style="width: 20vw; min-width: 330px;">
+                    <img src="animations/DoomguySpin.avif" style="width: 20vw; min-width: 330px; margin:0 auto;" fetchpriority="medium">
+                    <p>This character is a low poly version of Doomguy from Doom (1993). this model was made for fun, and sadly does not employ any techniques. the model is not animation-ready. </p>
+                    <img src="animations/SamusSpinShowcase.avif" style="width: 20vw; min-width: 330px; margin:0 auto;" fetchpriority="low">
                     <p>This character is a stylized verison of Samus Aran from the Metroid series. the model showcases gradient texture mapping, and animation-ready geometry, all in a low poly style. the model is 674 triangles, and uses a single 8x32 texture. this model is highly optimized for low memory environments, and could look good on underpowered technology such as the N64, PS1, and DS</p>
                 </div>
             </section>
+            <section id="envs">
+                <h2>Environments:</h2>
+                <p>A collection of environments created for various projects, highlighting my skills in optimizing 3D spaces for performance while maintaining aesthetic appeal.</p>
+                <img src="images/renders/MidgarStylized.avif" style="width: 30vw; min-width: 330px; margin:0 auto;" fetchpriority="low">
+                <p>This stylized version of Midgar showcases my ability to work within strict constraints, using a single 16x16 texture for all materials, blending artistic and technical skills.</p>
+                <img src="images/renders/TitansongIslandViewMini.avif" style="width: 50vw; min-width: 330px; margin:0 auto;" fetchpriority="low">
+                <p>This is a screenshot of one of the games I have worked on - Titansong - it is a simple game that only uses the mouse or player's finger if on a touch screen device. the impressive part here is how I optimized the game to render an infinetly large procedural terrain, along with clouds. </p>
+            </section>
             <section id="coms">
                 <h2>Commissioned Projects:</h2>
-                <p>This is a collection of commissioned projects that I was paid for.</p>
+                <p>A collection of commissioned projects created for clients, showcasing my ability to deliver high-quality, tailored 3D models to meet specific needs and expectations.</p>
                  <div class="model-viewer-container">
-                    <img src="models/MarionettePoster.webp">
+                    <img src="models/MarionettePoster.webp" fetchpriority="low" style="width: auto; max-height: 495px; margin:0 auto;">
                 </div>
-
-
             </section>
             <section id="contact">
                 <h2>Contact</h2>
@@ -68,7 +73,6 @@
             </section>
         </div>
     </div>
-
     <script>
         // Add smooth scrolling and active class toggling
         const links = document.querySelectorAll('.nav-link');

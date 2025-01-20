@@ -8,7 +8,6 @@
 
 /* Basic styling */
 body {
-    font-family: Arial, sans-serif; /* Fallback font */
     font-family: 'Tomorrow', Arial, sans-serif; /* Web font with fallback */
     margin: 0;
     padding: 0;
@@ -17,7 +16,6 @@ body {
     background-color: #474954;
     color: white;
 }
-
 
 
 .button-container {
@@ -109,9 +107,11 @@ body {
 }
 
 .content img {
+    display: block; /* Make the image a block-level element */
+    margin: 0 auto; /* Center the image horizontally */
     border-radius: 10px;
     max-width: 100%; /* Ensure images don't overflow the content area */
-    height: auto;
+    height: auto; /* Maintain aspect ratio */
 
 }
 
@@ -120,7 +120,8 @@ body {
     background:
     linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #474954 100%),
     url('art/3D-Art/images/renders/TifaBackgroundImage.avif');
-
+    padding-left: 10vw;
+    padding-right: 4vw;
     /* Adjust the position and behavior of the background */
     background-size: cover; /* Ensures it covers the full width */
     background-repeat: no-repeat; /* Avoids repeating the image */
@@ -132,9 +133,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* Optional: Add padding for content inside */
-    padding: 20px;
     color: white; /* Ensures text inside is readable */
 }
 
@@ -142,13 +140,13 @@ body {
 .content .text-container {
     font-size: 25px;
     flex: 1; /* Allow the text container to take up available space */
-    padding-right: 20px; /* Add spacing between text and image */
     text-shadow: 2px 2px 4px #000000;
 }
 
 .content .text-container h1 {
     font-size: 60px;
     text-shadow: 4px 4px 4px #000000;
+
 }
 
 /* Image container (right side) */
@@ -166,7 +164,6 @@ body {
     max-width: 800px; /* Optional: Add a max-width for better responsiveness */
     border-radius: 10px;
     display: block;
-    opacity: 1;
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
                                          color-stop(50%, rgba(0, 0, 0, 1)),
                                          color-stop(80%, rgba(0, 0, 0, 0.2)),
@@ -177,25 +174,24 @@ body {
 
 
 
+
 /* Mobile-specific styles */
-@media (max-width: 768px) {
+@media (max-width: 810px) {
     .sidebar {
-        width: 30%; /* Shrink sidebar to 30% for tablet size */
-        min-width: 150px; /* Prevent sidebar from becoming too small */
+        width: 24%; /* Shrink sidebar to 30% for tablet size */
+        min-width: 130px; /* Prevent sidebar from becoming too small */
     }
 
     .content {
         padding: 10px; /* Adjust content padding for mobile */
-        margin-left: 30%; /* Offset content dynamically based on new sidebar width */
+        margin-left: 24%; /* Offset content dynamically based on new sidebar width */
     }
 
     /* Image styling */
     .content .image-container img {
         width: 100%; /* Make sure the image takes up full container width */
-
         border-radius: 10px;
         display: block; /* Removes bottom margin (gap) from image */
-        opacity: 1; /* Adjust this to control transparency */
         -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
                                              color-stop(50%, rgba(0, 0, 0, 1)),
                                              color-stop(80%, rgba(0, 0, 0, 0.2)),
@@ -218,7 +214,7 @@ body {
         background-position: center top; /* Aligns the image at the top center */
 
         /* Set a minimum height for the section */
-        min-height: 50%;
+        min-height: 70vw;
 
         color: white; /* Ensures text inside is readable */
     }
@@ -226,13 +222,13 @@ body {
 
 @media (max-width: 480px) {
     .sidebar {
-        width: 30%; /* Further reduce sidebar to 40% for small screens */
-        min-width: 120px; /* Prevent sidebar from becoming too small */
+        display: none; /* Hide sidebar on mobile */
     }
 
     .content {
         padding: 10px; /* Adjust content padding for mobile */
-        margin-left: 30%; /* Offset content dynamically based on new sidebar width */
+        margin-top: 0%; /* Offset content dynamically based on new sidebar width */
+        margin-left: 0%; /* Offset content dynamically based on new sidebar width */
     }
 
     .content .image-container img {
@@ -255,8 +251,9 @@ body {
         min-height: 50%;
 
         /* Optional: Add padding for content inside */
-        padding: 20px;
+        padding: 30px;
         color: white; /* Ensures text inside is readable */
+
     }
 }
 
@@ -320,67 +317,6 @@ body {
     background-color: #575757;
 }
 
-
-
-/* Main content area */
-.content {
-    flex-grow: 1;
-    box-sizing: border-box;
-    margin-left: 15%;
-    padding: 10px;
-}
-
-.content img {
-    border-radius: 10px;
-    max-width: 100%; /* Ensure images don't overflow the content area */
-    height: auto;
-
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 30%; /* Shrink sidebar to 30% for tablet size */
-        min-width: 150px; /* Prevent sidebar from becoming too small */
-    }
-
-    .content {
-        padding: 10px; /* Adjust content padding for mobile */
-        margin-left: 30%; /* Offset content dynamically based on new sidebar width */
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 30%; /* Further reduce sidebar to 40% for small screens */
-        min-width: 120px; /* Prevent sidebar from becoming too small */
-    }
-
-    .content {
-        padding: 10px; /* Adjust content padding for mobile */
-        margin-left: 30%; /* Offset content dynamically based on new sidebar width */
-    }
-}
-
-section {
-    margin-bottom: 50px;
-}
-
-section h2 {
-    color: #FFFFFF;
-}
-
-/* Active link styling */
-.active {
-    background-color: #575757;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-}
 
 /* Active link styling */
 .active {
